@@ -6,8 +6,5 @@ describe('sample test', () => {
     cy.get(".signIn-btn").click()
     cy.url().should('eq','http://austin-web-react.s3-website.ap-south-1.amazonaws.com/dashboard')
     cy.title().should('include','Austin')
-
-
-
   });
 });
