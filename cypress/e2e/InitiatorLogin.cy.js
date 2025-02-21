@@ -5,8 +5,7 @@ describe('Initiator Login Test', () => {
   const loginPage = new LoginPage();  // Correct class instantiation
 
   beforeEach(() => {
-    cy.visit('http://austin-web-react.s3-website.ap-south-1.amazonaws.com/login/false',{
-      failOnStatusCode: false  // Prevent Cypress from failing on 404 status
+    cy.visit('/login/false',{failOnStatusCode: false  // Prevent Cypress from failing on 404 status
     });
   });
 

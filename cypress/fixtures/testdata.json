@@ -6,5 +6,25 @@
     "pi":{
         "username":"vijayinvestigator@gmail.com",
         "password":"1234567890"
+    },
+    "grc":{
+        "username":"vijaygrc@gmail.com",
+        "password":"1234567890"
+    },
+    "research":{
+        "username":"vijayresearch@gmail.com",
+        "password":"1234567890"
+    },
+    "admin":{
+        "username":"srisai27@gmail.com",
+        "password":"1234567890"
+    },
+    "new request":{
+        "requestType":"Academic",
+         "methodology":"methodology",
+         "title" :"Pembrolizumab has high affinity and potent receptor blocking activity for PD-1, based on preclinical in vitro data. Pembrolizumab has a well-established safety profile and is in clinical development as an IV and SC immunotherapy for multiple malignancies",
+         "description":"This clinical trial also uses the chemotherapy drugs gemcitabine, cisplatin, and carboplatin. These chemotherapy drugs are standard treatments for bladder cancer and are approved by the FDA and other health authorities. In this study, there are 2 different groups. Subjects will be assigned to a group randomly like tossing a coin. Subjects in Group A will get the study drug disitamab vedotin once every two weeks and pembrolizumab once every 6 weeks",
+          "objective":"To compare the efficacy of disitamab vedotin in combination with pembrolizumab to chemotherapy as first-line treatment in subjects with advanced UC that expresses HER2",
+          "studyTeam":"Study Team-A"
     }
 }

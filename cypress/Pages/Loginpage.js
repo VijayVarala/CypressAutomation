@@ -10,6 +10,26 @@ class LoginPage {
     cy.get(this.usernameField).clear().type(initiatorUname);
   }
 
+  // Method to enter username (Initiator)
+  enterPiUsername(PiUname) {
+    cy.get(this.usernameField).clear().type(PiUname);
+  }
+
+  // Method to enter username (Initiator)
+  enterGrcUsername(GrcUname) {
+    cy.get(this.usernameField).clear().type(GrcUname);
+  }
+
+  // Method to enter username (Initiator)
+  enterResearchUsername(ResearchUname) {
+    cy.get(this.usernameField).clear().type(ResearchUname);
+  }
+
+  // Method to enter username (Initiator)
+  enterAdminUsername(AdminUname) {
+    cy.get(this.usernameField).clear().type(AdminUname);
+  }
+
   // Method to enter password
   enterPassword(password) {
     cy.get(this.passwordField).clear().type(password);
