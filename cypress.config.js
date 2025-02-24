@@ -9,6 +9,6 @@ module.exports = defineConfig({
     baseUrl: "http://austin-web-react.s3-website.ap-south-1.amazonaws.com", // Set base URL
     defaultCommandTimeout: 10000, // Increase timeout if needed
     video: false, // Disable video recording (optional)
-    retries: 1 // Retry failed tests up to 2 times
+   // retries: 0 // Retry failed tests up to 2 times
   }
 });

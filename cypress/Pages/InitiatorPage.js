@@ -1,4 +1,6 @@
+import 'cypress-xpath';
 class InitiatorPage {
+    
     constructor() {
         this.newRequest = "button:contains('NEW REQUEST')";
         this.dashboard = "span:contains('Dashboard')";
@@ -17,7 +19,6 @@ class InitiatorPage {
         this.viewAll = "button:contains('View All')";
         this.viewNotifications="h2.my-4";
         this.viewAllComments = "button:contains('View all comments')";
-        this.viewDocument = "img[alt='viewdoc']";
         this.profile = "button:contains('View all comments')";
         this.requestType = "#requestType";
         this.methodology = "#methodology";
@@ -33,6 +34,19 @@ class InitiatorPage {
         this.cancelBtn = "button:contains('CANCEL')";
         this.saveDraft = "button:contains('SAVE DRAFT')";
         this.submit = "button:contains('SUBMIT')";
+
+        //withdraw
+        this.projectRow = "tbody tr.highlight-row td:nth-child(1) div:nth-child(1)";
+        this.withdrawButton="(//p[text()='Withdraw'])[2]";
+        this.reasonForWithdraw=".form-control";
+        this.withdrawSubmit=".withdraw_Submit_btn";
+        this.popUpYes="//button[text()='Yes']";
+        this.closePopUp="//button[text()='Close']";
+
+        //view Documents
+        this.viewDocument = "//img[@alt='viewdoc']";
+        this.projectName="(//div[contains(@class,'table-responsive')]//table//tr)[2]";
+
     }
 
     clickNewRequest() {
@@ -60,7 +74,7 @@ class InitiatorPage {
     }
 
     clickInDraft() {
-        cy.get(this.inDraft).click();
+        cy.get(this.inDraft).click(); 
     }
 
     clickProjectsApproved() {
@@ -144,6 +158,38 @@ class InitiatorPage {
     }
     verifyViewAllNotifications(){
         cy.get(this.viewNotifications).should('be.visible');
+    }
+    
+
+    //Withdraw
+    clickOnProjectRows(){
+        cy.xpath("(//div[contains(@class,'project-request-container')]//table//tr)[2]").click();
+
+    }
+    clickOnWithdraw(){
+        cy.xpath(this.withdrawButton).click();
+
+    }
+    enterReasonForWithdraw(text){
+        cy.get(this.reasonForWithdraw).click().type(text);
+
+    }
+    clickOnWithdrawSubmit(){
+        cy.get(this.withdrawSubmit).click();
+    }
+    clickOnYesInPopup(){
+        cy.xpath(this.popUpYes).click();
+    }
+    ClickOnClose(){
+        cy.xpath(this.closePopUp).click();
+    }
+
+    //View Documents
+    clickOnProjectName(){
+        cy.xpath(this.projectName).click();
+    }
+    clickOnDocument(){
+        cy.xpath(this.viewDocument).click()
     }
 }   
 
