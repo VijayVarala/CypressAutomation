@@ -4,12 +4,18 @@ class InitiatorPage {
         this.dashboard = "span:contains('Dashboard')";
         this.projects = "span:contains('Projects')";
         this.notifications = "span:contains('Notifications')";
+        this.editrequest="img[alt='edit_icon']";
         this.logout = "span:contains('Logout')";
         this.myProjects = "h5:contains('My Projects')";
+        this.myProjectsText=".project-header-title";
         this.inDraft = "h5:contains('In Draft')";
+        this.inDraftText=".projectdraft-header-title";
         this.projectsApproved = "h5:contains('Projects Approved')";
+        this.projectApprovedText=".projectapprove-table-responsive";
         this.projectsRejected = "h5:contains('Projects Rejected')";
+        this.projectRejectedText=".cards-title-dashboard";
         this.viewAll = "button:contains('View All')";
+        this.viewNotifications="h2.my-4";
         this.viewAllComments = "button:contains('View all comments')";
         this.viewDocument = "img[alt='viewdoc']";
         this.profile = "button:contains('View all comments')";
@@ -117,7 +123,28 @@ class InitiatorPage {
         cy.get(this.objective).type(objective);
         cy.get(this.studyTeam).type(studyTeam);
     }
-    
-}
+    clickOnEdit(){
+        cy.get(this.editrequest).first().click();
+
+    }
+    editTitle(Title){
+        cy.get(this.title).click().clear().type(Title);
+    }
+    verifyMyProjectsText(){
+        cy.get(this.myProjectsText).should('be.visible');
+    }
+    VerifyInDraftText(){
+        cy.get(this.inDraftText).should('be.visible');
+    }
+    verifyProjectApprovedText(){
+        cy.get(this.projectApprovedText).should('be.visible');
+    }
+    verifyProjectRejectedText(){
+        cy.get(this.projectRejectedText).should('be.visible');
+    }
+    verifyViewAllNotifications(){
+        cy.get(this.viewNotifications).should('be.visible');
+    }
+}   
 
 export default InitiatorPage;
